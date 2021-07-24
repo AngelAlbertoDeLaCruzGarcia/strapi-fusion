@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_banners",
+  "info": {
+    "name": "home_banners"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "position": {
+      "type": "integer",
+      "required": true
+    },
+    "banner": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "product": {
+      "model": "products"
+    }
+  }
+}
