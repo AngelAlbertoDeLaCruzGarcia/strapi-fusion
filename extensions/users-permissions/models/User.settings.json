@@ -58,6 +58,16 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
